@@ -174,7 +174,7 @@ export default (type, params) => {
     if (type === AUTH_CHECK) {
         return localStorage.getItem('token') ? Promise.resolve() : Promise.reject();
     }
-    return Promise.reject('Unkown method');
+    return Promise.reject('Unknown method');
 };
 ```
 
@@ -197,7 +197,7 @@ export default (type, params) => {
     if (type === AUTH_CHECK) {
         return localStorage.getItem('token') ? Promise.resolve() : Promise.reject({ redirectTo: '/no-access' });
     }
-    return Promise.reject('Unkown method');
+    return Promise.reject('Unknown method');
 };
 ```
 
@@ -226,7 +226,7 @@ export default (type, params) => {
             // check credentials for the comments resource
         }
     }
-    return Promise.reject('Unkown method');
+    return Promise.reject('Unknown method');
 };
 ```
 
